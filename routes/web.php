@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\ScheduleController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/',[ScheduleController::class,'index']);
+Route::get('/schedules/create',[ScheduleController::class,'create']);
+Route::get('/schedules/{schedule}',[ScheduleController::class,'show']);
+Route::post('/schedules',[ScheduleController::class, 'store']);
+Route::get('/schedules/{schedule}/edit', [ScheduleController::class,'edit']);
+Route::put('/schedules/{schedule}',[ScheduleController::class,'update']);
+Route::delete('schedules/{schedule}',[ScheduleController::class, 'delete']);
