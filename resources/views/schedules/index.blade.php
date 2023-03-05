@@ -8,6 +8,10 @@
         <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
     </head>
+    <x-app-layout>
+    <x-slot name="header">
+        　スケジュール管理   
+        </x-slot>
     <body class="antialiased">
      <h1>スケジュール管理</h1>
      <a href ="/schedules/create">新規作成</a>
@@ -38,4 +42,5 @@
          
      </script>
     </body>
+    </x-app-layout>
 </html>

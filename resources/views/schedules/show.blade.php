@@ -8,13 +8,14 @@
         <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
     </head>
+    <x-app-layout>
     <body class="antialiased">
      <h1 class='title'>
          {{ $schedule->title }}
      </h1>
      <div class='content'>
         <div class='content_schedule'>
-            <h3>編集or削除</h3>
+            <h3>詳細</h3>
             <p class='title'>{{ $schedule->title}}</p>
             <p class='sub_title'>{{ $schedule->sub_title}}</p>
             <p class='body'>{{ $schedule->body}}</p>
@@ -30,4 +31,5 @@
          <a href="/">戻る</a>
      </div>
     </body>
+    </x-app-layout>
 </html>

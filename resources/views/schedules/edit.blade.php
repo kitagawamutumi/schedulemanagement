@@ -8,6 +8,7 @@
         <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
    </head>
+   <x-app-layout>
     <body class="antialiased">
         <form action = "/schedules/{{ $schedule->id }}" method="POST">
             @csrf
@@ -37,4 +38,5 @@
          <a href="/schedules/{{ $schedule->id }}">戻る</a>
      </div>
     </body>
+    </x-app-layout>
 </html>
