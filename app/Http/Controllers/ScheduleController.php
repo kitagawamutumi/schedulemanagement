@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Schedule;
+use App\Models\User;
 class ScheduleController extends Controller
 {
     public function index(Schedule $schedule)
@@ -47,5 +48,7 @@ class ScheduleController extends Controller
         $schedule->delete();
         return redirect('/');
     }
+    
+    
     
 }

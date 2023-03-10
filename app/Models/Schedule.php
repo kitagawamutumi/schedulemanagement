@@ -23,4 +23,9 @@ class Schedule extends Model
         return $this->orderby('updated_at','DESC')->limit($limit_count)->get();
     }
     
+    public function category()
+    {
+    return $this->belongsTo(User::class);
+    }
+    
 }
