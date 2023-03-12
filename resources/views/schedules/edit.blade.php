@@ -35,11 +35,11 @@
             <div class="body">
                 <textarea name="schedule[body]" placeholder="内容">{{ $schedule->body }}</textarea>
                 <p class="body__error" style="color:red">{{ $errors->first('schedule.body') }}</p>
-            </div>　
-            <input type="submit" value="更新">
+            </div>
+            <input type="submit" value="更新" style="color:white" class="bg-black rounded-md px-1 py-1">
         </from>
      <div class='footer'>
-         <a href="/schedules/{{ $schedule->id }}">戻る</a>
+         <a href="/schedules/{{ $schedule->id }}" style="color:white" class="bg-black rounded-md px-1 py-1">戻る</a>
      </div>
     </body>
     </x-app-layout>
