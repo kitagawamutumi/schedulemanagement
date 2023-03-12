@@ -37,7 +37,7 @@ class ScheduleController extends Controller
         return view('schedules/edit')->with(['schedule' => $schedule]);
     }
     
-    public function update(Request $request, Schedule $schedule)
+    public function update(ScheduleRequest $request, Schedule $schedule)
     {
         $input_schedule = $request['schedule'];
         $schedule->fill($input_schedule)->save();

@@ -11,13 +11,7 @@ class ScheduleRequest extends FormRequest
      *
      * @return bool
      */
-    public function authorize()
-    {
-         return [
-            'schedule.title' => 'required',
-            'schedule.body' => 'required',
-        ];
-    }
+   
 
     /**
      * Get the validation rules that apply to the request.
@@ -27,7 +21,12 @@ class ScheduleRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'schedule.title' => 'required',
+            'schedule.body' => 'required',
+            'schedule.start_at' => 'required' ,
+            'schedule.sub_title' => 'required',
+            'schedule.due_at' => 'required',
+            
         ];
     }
 }

@@ -14,24 +14,28 @@
             @csrf
             @method('PUT')
             <h2>編集画面</h2>
-            <div class="body">
-                <div class= "title">
-                    <input type="text" name="schedule[title]" value="{{ $schedule->title }}">
-                </div>
-               <div class="sub_title">
-                <input type="text" name="schedule[sub_title]" value="{{ $schedule->sub_title }}">
-                </div>
-                <div class="start_at">
+            <div class= "title">
+                <input type="text" name="schedule[title]"　placeholder="タイトル" value="{{ $schedule->title }}">
+                <p class="title__error" style="color:red">{{ $errors->first('schedule.title') }}</p>
+            </div>
+           <div class="sub_title">
+                <input type="text" name="schedule[sub_title]"　placeholder="目標"  value="{{ $schedule->sub_title }}">
+                <p class="sub_title__error" style="color:red">{{ $errors->first('schedule.sub_title') }}</p>
+            </div>
+            <div class="start_at">
                 <label for="start_at">開始日</label>
                 <input type="date" name="schedule[start_at]" >
-                </div>
-                <div class="due_at">
+                <p class="start_at__error" style="color:red">{{ $errors->first('schedule.start_at') }}</p>
+            </div>
+            <div class="due_at">
                 <label for="due_at">期限日</label>
                 <input type="date" name="schedule[due_at]" >
-                </div>
-                <textarea name="schedule[body]" placeholder="サブ目標を設定してください">{{ $schedule->body }}</textarea>
+                <p class="due_at__error" style="color:red">{{ $errors->first('schedule.due_at') }}</p>
             </div>
-            
+            <div class="body">
+                <textarea name="schedule[body]" placeholder="内容">{{ $schedule->body }}</textarea>
+                <p class="body__error" style="color:red">{{ $errors->first('schedule.body') }}</p>
+            </div>　
             <input type="submit" value="更新">
         </from>
      <div class='footer'>
