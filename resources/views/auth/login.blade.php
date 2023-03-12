@@ -38,6 +38,8 @@
                     {{ __('Forgot your password?') }}
                 </a>
             @endif
+            
+           <div class="bg-black rounded-md px-2 py-1 ml-3"><a href="/register" class="text-white">新規登録</a></div>
 
             <x-primary-button class="ml-3">
                 {{ __('Log in') }}

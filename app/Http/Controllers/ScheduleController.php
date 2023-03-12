@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Schedule;
 use App\Models\User;
+use App\Http\Requests\ScheduleRequest;
 class ScheduleController extends Controller
 {
     public function index(Schedule $schedule)
@@ -23,7 +24,7 @@ class ScheduleController extends Controller
         return view('schedules/create');
     }
     
-    public function store(Request $request, Schedule $schedule)
+    public function store(ScheduleRequest $request, Schedule $schedule)
     {
         $input = $request['schedule'];
         $schedule->fill($input)->save();
@@ -48,6 +49,7 @@ class ScheduleController extends Controller
         $schedule->delete();
         return redirect('/');
     }
+    
     
     
     

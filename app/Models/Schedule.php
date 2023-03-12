@@ -15,7 +15,8 @@ class Schedule extends Model
         'due_at',
         'body',
         'title',
-        'sub_title'
+        'sub_title',
+        'user_id'
         ];
     
     public function getBylimit(int $limit_count = 30)
